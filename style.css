@@ -137,37 +137,59 @@
 
 
 
+/* eseguito guardando soluzione e w3school e mdn
+perchè non chiarissimo l uso delle proprietà all interno 
+di keyframes*/
 
 .ex-10-icon {
     font-size: 60px;
 }
 
 .ex-10-icon {
-    animation-name: 10icon;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    position: relative; 
-}
-@keyframes 10icon {
-    0%{
-        top:0;
-        
-        }
-     
-
-
-
+    animation: ring 1s linear infinite;
 }
 
+@keyframes ring {
+    0%{ transform: rotate(360deg);}
+    
+}
+    
 
 
 
 
 
-
+/* accelerazione dovuta allo stacco percentuale : se si mette
+al 50% il punto di ritorno il tempo si divide equamente, con 
+90% di 2sec viene preso dall'andata e velocizza in 10% il ritorno */
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover{
+    animation: halfring 2s linear;
+}
+
+@keyframes halfring {
+    0%{
+        transform: rotate(0);
+    }
+    
+    90%{
+        transform: rotate(315deg);
+    }
+
+    100%{
+        transform: rotate(0);
+    }
+
+
+    
+}
+
+
+
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -196,4 +218,10 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+
+/* RIVEDERE -  */
+.ex-12-top-white:hover{
+    transition: 1s;
 }
